@@ -1,0 +1,10 @@
+# Terraform files - never upload these!
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+*.tfvars
+
+# Sensitive files
+*.pem
+*.key
