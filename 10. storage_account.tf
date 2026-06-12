@@ -21,3 +21,12 @@ resource "azurerm_storage_container" "backups" {
   storage_account_id    = azurerm_storage_account.storage.id
   container_access_type = "private"
 }
+
+# container for tfstate
+
+resource "azurerm_storage_container" "tfstate" {
+  name                  = "tfstate"
+  storage_account_id    = azurerm_storage_account.storage.id
+  container_access_type = "private"
+}
+

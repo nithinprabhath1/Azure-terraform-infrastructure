@@ -7,9 +7,9 @@ variable "location" {
 # RESOURCE GROUP NAMES
 variable "resource_groups" {
   default = {
-    net  = "rg-networking"
-    prod = "rg-production"
-    dev  = "rg-dev"
+    net   = "rg-networking"
+    prod  = "rg-production"
+    dev   = "rg-dev"
   }
 }
 
