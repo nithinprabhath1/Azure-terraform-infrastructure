@@ -27,6 +27,16 @@ resource "azurerm_key_vault" "kv" {
   }
 }
 
+access_policy {
+  tenant_id = data.azurerm_client_config.current.tenant_id
+  object_id = "9a4253ae-2dd1-4fc4-bce5-8f71b1fd5446"
+
+  secret_permissions = [
+    "Get",
+    "List"
+  ]
+}
+
 # Store VM password as secret
 resource "azurerm_key_vault_secret" "vm_password" {
   name         = "vm-admin-password"
